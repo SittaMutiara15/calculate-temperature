@@ -19,8 +19,8 @@ else :
     
 st.write("---")
     
-molalitas = st.number_input(':blue[Nilai molalitas]')
-nilai_tetapan = st.number_input(':blue[Nilai tetapan Kb atau Kf]') 
+molalitas = st.number_input(':blue[Nilai molalitas (m)]')
+nilai_tetapan = st.number_input(':blue[Nilai tetapan Kb atau Kf (°C kg/mol)]') 
     
 
 jenis_larutan = st.selectbox(':blue[Pilih jenis larutan]',('Larutan Elektrolit', 'Larutan non Elektrolit'))
@@ -36,6 +36,6 @@ st.write(f'faktor vant hoff adalah {faktor_vant_hoff}')
 nilai_perhitungan = molalitas*nilai_tetapan*faktor_vant_hoff
 if st.button('Hitung nilai'):
     
-    hasil = round((nilai_perhitungan),3)
+    hasil = (f'{nilai_perhitungan}°C')
     
     st.success(f'nilai perhitungan adalah {hasil}') 
